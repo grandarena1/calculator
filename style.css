@@ -1,0 +1,58 @@
+/* Global CSS */
+
+* {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Page CSS */
+
+.page-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(96, 79, 252, 0.082), white);
+}
+
+/* Calculator CSS */
+
+.calculator-container {
+    min-height: 80vh;
+    height: 80vh;
+    min-width: 35vw;
+    width: 35vw;
+    border-radius: 5%;
+    display: flex;
+    background: linear-gradient(rgba(112, 112, 112, 1), rgb(63, 62, 62));
+}
+
+.screen {
+    min-height: 15%;
+    height: 15%;
+    min-width: 90%;
+    width: 90%;
+    background: linear-gradient(rgb(230, 229, 201), rgb(174, 173, 153));
+    border-radius: 5%;
+    margin: 10% auto;
+}
+
+.buttons-container {
+    
+}
+
+/* Footer CSS */
+
+.footer-container {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background: linear-gradient(rgba(112, 112, 112, 1), rgb(63, 62, 62));
+}
+
+.footer-container p {
+    color: white;
+}
