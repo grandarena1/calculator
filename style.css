@@ -25,6 +25,9 @@
     border-radius: 5%;
     display: flex;
     background: linear-gradient(rgba(112, 112, 112, 1), rgb(63, 62, 62));
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .screen {
@@ -38,7 +41,17 @@
 }
 
 .buttons-container {
-    
+    background-color: rgb(76, 76, 76);
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+}
+
+button {
+    width: 25%;
+    height: 20%;
 }
 
 /* Footer CSS */
