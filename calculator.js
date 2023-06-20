@@ -1,46 +1,59 @@
 let displayValue = document.getElementsByClassName('display-value')[0];
-const digitButtons = document.getElementsByClassName('digit-btn');
 
-function add(num1, num2)
+let firstNumber = 0;
+let operator = "";
+let shouldResetDisplay = false;
+
+function appendDigit(digit) 
 {
-    return num1 + num2;
+  if (shouldResetDisplay) 
+  {
+    displayValue.innerText = "";
+    shouldResetDisplay = false;
+  }
+
+  displayValue.innerText += digit;
 }
 
-function subtract(num1, num2)
+function setOperator(op) 
 {
-    return num1 - num2;
+  firstNumber = parseFloat(displayValue.innerText);
+  operator = op;
+  shouldResetDisplay = true;
 }
 
-function multiply(num1, num2)
+function calculate() 
 {
-    return num1 * num2;
+  const secondNumber = parseFloat(displayValue.innerText);
+  let result = 0;
+  
+  switch (operator) 
+  {
+    case "+":
+      result = firstNumber + secondNumber;
+      break;
+    case "-":
+      result = firstNumber - secondNumber;
+      break;
+    case "*":
+      result = firstNumber * secondNumber;
+      break;
+    case "/":
+      result = firstNumber / secondNumber;
+      break;
+    default:
+      return;
+  }
+  
+  displayValue.innerText = result.toString();
+  shouldResetDisplay = true;
 }
 
-function divide(num1, num2)
+function clearDisplayValue()
 {
-    return num1 / num2;
-}
-
-function operate(operator, num1, num2)
-{
-    switch(operator)
+    if(shouldResetDisplay) 
     {
-        case "+":
-            return add(num1, num2)
-            break;
-        case "-":
-            return subtract(num1, num2)
-            break;
-        case "*":
-            return multiply(num1, num2)
-            break;
-        case "/":
-            return divide(num1, num2)
-            break;
+        displayValue.innerText = "";
+        shouldResetDisplay = false;
     }
-}
-
-function updateDisplayValue(value)
-{
-    displayValue.innerText += value.toString();
 }
