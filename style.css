@@ -35,9 +35,17 @@
     height: 15%;
     min-width: 90%;
     width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(rgb(230, 229, 201), rgb(174, 173, 153));
     border-radius: 5%;
     margin: 10% auto;
+}
+
+.screen p {
+    text-align: center;
+    font-size: 18px;
 }
 
 .buttons-container {
@@ -46,12 +54,22 @@
     width: 90%;
     display: flex;
     flex-flow: row wrap;
-    align-content: stretch;
+    align-content: space-around;
+    justify-content: space-around;
 }
 
-button {
-    width: 25%;
+button, .operator-btn, .clear-btn {
+    width: 23%;
     height: 20%;
+    background-color: rgb(225, 224, 224);
+}
+
+.operator-btn {
+    background-color: rgb(197, 193, 122);
+}
+
+.clear-btn {
+    background-color: rgb(197, 122, 122);
 }
 
 /* Footer CSS */

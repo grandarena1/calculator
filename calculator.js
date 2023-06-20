@@ -1,6 +1,5 @@
-let firstNum;
-let operator;
-let lastNum;
+let displayValue = document.getElementsByClassName('display-value')[0];
+const digitButtons = document.getElementsByClassName('digit-btn');
 
 function add(num1, num2)
 {
@@ -39,4 +38,9 @@ function operate(operator, num1, num2)
             return divide(num1, num2)
             break;
     }
+}
+
+function updateDisplayValue(value)
+{
+    displayValue.innerText += value.toString();
 }
